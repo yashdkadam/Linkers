@@ -1,20 +1,34 @@
 import React, { Component } from "react";
-import LinkForm from "./linkFom";
+import Form from "./common/form";
 
 class Control extends React.Component {
+  addForm = () => {
+    const { data, onDelete } = this.props;
+    let forms = [];
+    for (let keys in data) {
+      forms.push(
+        <Form data={data[keys]} key={keys} id={keys} onDelete={onDelete} />
+      );
+    }
+    console.log(forms);
+    return forms;
+  };
+
   render() {
+    const { increamentCount } = this.props;
     return (
-      <div>
-        <div className="col-sm-7 m-2">
-          <h1>Links</h1>
+      <div className="overflow auto scroll border-left border-right">
+        <div className="col-19 m-0 height ml-5">
           <div className="col-5 m-2">
-            <button className="btn btn-primary btn-block" type="button">
+            <button
+              className="btn btn-primary btn-block m-4"
+              type="button"
+              onClick={increamentCount}
+            >
               Add Links
             </button>
           </div>
-          <div className="container">
-            <LinkForm />
-          </div>
+          {this.addForm()}
         </div>
       </div>
     );

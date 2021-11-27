@@ -1,13 +1,9 @@
 import "./App.css";
 import React from "react";
-import Control from "./components/control";
+import Container from "./components/container";
 
 function App() {
-  return (
-    <React.Fragment>
-      <Control />
-    </React.Fragment>
-  );
+  return <Container />;
 }
 
 export default App;

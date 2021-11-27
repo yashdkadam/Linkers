@@ -6,9 +6,43 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #b1b3b4;
+  overflow-y: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.height {
+  height: 89vh;
+  width: 121vh;
+}
+
+.lmargin {
+  margin-left: 86%;
+}
+
+.box {
+  height: 85vh;
+  width: 45vh;
+  margin-left: 8%;
+  border: 10px solid black;
+  border-radius: 45px;
+}
+
+.form-control-plaintext {
+  outline: 0;
+}
+
+.scroll {
+  overflow-y: scroll;
+}
+
+.width {
+  width: 50%;
+}
+
+.vertical {
+  height: 91vh;
 }
