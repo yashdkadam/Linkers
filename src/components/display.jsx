@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import LinkGroup from "./linkGroup";
 
 class Panel extends React.Component {
+  componentDidMount() {
+    const { handleMobileView } = this.props;
+    handleMobileView();
+  }
+
   addForm = () => {
-    const { count, data } = this.props;
+    const { data } = this.props;
     let tabs = [];
     for (let keys in data) {
       tabs.push(<LinkGroup data={data[keys]} id={keys} />);
@@ -25,7 +30,7 @@ class Panel extends React.Component {
     const { profile } = this.props;
     console.log(profile);
     return (
-      <div className="text-center text-light container">
+      <div className="text-center text-light">
         <p>
           {profile.title}
           <br></br>
@@ -37,10 +42,10 @@ class Panel extends React.Component {
 
   render() {
     return (
-      <div className="box mt-4 ml-2 overflow hidden bg-secondary">
+      <div className="bg-secondary container-fluid vh-100 d-inline-block">
         {this.renderImg()}
         {this.renderTitle()}
-        {this.addForm()}
+        <div className="container col-7">{this.addForm()}</div>
       </div>
     );
   }

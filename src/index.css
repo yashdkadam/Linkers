@@ -14,9 +14,18 @@ code {
     monospace;
 }
 
+.imgHeight {
+  width: 4vw;
+}
+
 .height {
   height: 89vh;
   width: 121vh;
+}
+.vertical {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 10vh;
 }
 
 .lmargin {
@@ -24,9 +33,9 @@ code {
 }
 
 .box {
-  height: 85vh;
+  height: 80vh;
   width: 45vh;
-  margin-left: 8%;
+  margin-left: 9%;
   border: 10px solid black;
   border-radius: 45px;
 }
@@ -45,4 +54,16 @@ code {
 
 .vertical {
   height: 91vh;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.imgSize {
+  height: 10vh;
+}
+
+.size {
+  height: 2vh;
 }

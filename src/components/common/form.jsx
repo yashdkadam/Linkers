@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-
+import { updateTab } from "../../services/linkService";
 class Form extends React.Component {
   renderInput = (label, name) => {
     const { data } = this.props;
+
     return (
       <div>
         <div class="form-group row">
@@ -15,8 +16,8 @@ class Form extends React.Component {
               class="form-control-plaintext border-bottom"
               id={name}
               placeholder={`Enter ${label}`}
-              onInput={this.handleInput}
-              value={data[`${name}`]}
+              onBlur={(e) => this.handleInput(e, name)}
+              defaultValue={data[name]}
             />
           </div>
         </div>
@@ -24,18 +25,22 @@ class Form extends React.Component {
     );
   };
 
-  handleInput = () => {
-    console.log("Input");
+  handleInput = (e, name) => {
+    const { data, updateData } = this.props;
+    console.log(data.id);
+    const res = updateTab(data.id, name, e.target.value);
+    console.log(res);
+    updateData();
   };
 
   renderButton = () => {
-    const { id, onDelete } = this.props;
+    const { data, onDelete } = this.props;
     return (
       <button
         className="btn btn-warning col-1 pr-0"
-        onClick={() => onDelete(id)}
+        onClick={() => onDelete(data["id"])}
       >
-        <i className="fa fa-trash"></i>
+        <i className="fa fa-minus"></i>
       </button>
     );
   };
