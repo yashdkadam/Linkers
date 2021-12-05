@@ -26,7 +26,7 @@ class Panel extends React.Component {
     console.log(profile);
     return (
       <div className="text-center text-light container">
-        <p>
+        <p className="mb-0">
           {profile.title}
           <br></br>
           {profile.bio}
@@ -37,10 +37,11 @@ class Panel extends React.Component {
 
   render() {
     return (
-      <div className="box mt-4 ml-2 overflow hidden bg-secondary">
+      <div className="box mt-4 ml-2 example display bg-secondary">
         {this.renderImg()}
         {this.renderTitle()}
         {this.addForm()}
+        <p className="mt-5 text-center text-light">Linkers</p>
       </div>
     );
   }

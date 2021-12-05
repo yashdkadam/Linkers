@@ -61,9 +61,29 @@ code {
 }
 
 .imgSize {
-  height: 10vh;
+  height: 15vh;
 }
 
 .size {
   height: 2vh;
+}
+
+.display {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .responsive {
+    width: 90%;
+  }
+}
+@media (min-width: 400px) {
+  .responsive {
+    width: 50%;
+  }
 }

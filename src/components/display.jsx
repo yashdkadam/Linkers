@@ -21,7 +21,7 @@ class Panel extends React.Component {
     return (
       <img
         src="https:randomuser.me/api/portraits/men/1.jpg"
-        className="rounded-circle mx-auto d-block imgSize mt-2"
+        className="rounded-circle mx-auto d-block imgSize mt-4"
       />
     );
   };
@@ -31,7 +31,7 @@ class Panel extends React.Component {
     console.log(profile);
     return (
       <div className="text-center text-light">
-        <p>
+        <p className="mb-0">
           {profile.title}
           <br></br>
           {profile.bio}
@@ -45,7 +45,8 @@ class Panel extends React.Component {
       <div className="bg-secondary container-fluid vh-100 d-inline-block">
         {this.renderImg()}
         {this.renderTitle()}
-        <div className="container col-7">{this.addForm()}</div>
+        <div className="container col-15">{this.addForm()}</div>
+        <p className="mt-5 text-center text-light">Linkers</p>
       </div>
     );
   }
