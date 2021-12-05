@@ -39,7 +39,7 @@ class App extends Component {
     return (
       <React.Fragment>
         {mobileView && <NavBar />}
-        <div className="d-flex align-items-start flex-row">
+        <div className="d-flex align-items-start flex-row bg-light">
           {mobileView && <VerticalNav changeCondition={this.changeCondition} />}
           <Switch>
             <Route

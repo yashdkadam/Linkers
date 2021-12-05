@@ -3,7 +3,7 @@ class VerticalNav extends Component {
   render() {
     const { changeCondition } = this.props;
     return (
-      <div className="d-flex align-items-start flex-row m-0">
+      <div className="d-flex align-items-start flex-row m-0 bg-secondary">
         <nav className="navbar bg-light vertical">
           <div onClick={changeCondition} className="clickable">
             <img
