@@ -52,7 +52,7 @@ class Container extends Component {
     const { data, count } = this.state;
     const { condition, profile, updateProfileData } = this.props;
     return (
-      <div className="d-flex align-items-start flex-row m-0 bg-light">
+      <div className="d-flex align-items-start flex-row m-0 bg-white">
         <Control
           addForm={this.addForm}
           increamentCount={this.increamentCount}
