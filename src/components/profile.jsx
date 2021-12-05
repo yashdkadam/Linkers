@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { updateProfile } from "../services/linkService";
 
-class Profile extends React.Component {
+class Profile extends Component {
   state = {
     profile: [],
   };
@@ -11,6 +11,7 @@ class Profile extends React.Component {
       <img
         src="https:randomuser.me/api/portraits/men/1.jpg"
         className="rounded-circle mx-auto d-block"
+        alt="..."
       />
     );
   };

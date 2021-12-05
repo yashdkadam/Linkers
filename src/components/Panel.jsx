@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import LinkGroup from "./linkGroup";
 
-class Panel extends React.Component {
+class Panel extends Component {
   addForm = () => {
-    const { count, data } = this.props;
+    const { data } = this.props;
     let tabs = [];
     for (let keys in data) {
       tabs.push(<LinkGroup data={data[keys]} id={keys} />);
@@ -17,6 +17,7 @@ class Panel extends React.Component {
       <img
         src="https:randomuser.me/api/portraits/men/1.jpg"
         className="rounded-circle mx-auto d-block imgSize mt-2"
+        alt="..."
       />
     );
   };

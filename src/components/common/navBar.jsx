@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBar = ({ user }) => {
   return (
@@ -11,6 +11,7 @@ const NavBar = ({ user }) => {
         className="navbar-brand "
         href="http://localhost:3000/display"
         target="_blank"
+        rel="noreferrer"
       >
         <u>My Link Page</u>
       </a>

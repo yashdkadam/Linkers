@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { updateTab } from "../../services/linkService";
-class Form extends React.Component {
+class Form extends Component {
   renderInput = (label, name) => {
     const { data } = this.props;
 

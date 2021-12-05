@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class LinkGroup extends React.Component {
+class LinkGroup extends Component {
   renderTabs(label, url) {
     return (
       <a
@@ -8,6 +8,7 @@ class LinkGroup extends React.Component {
         type="button"
         href={url}
         target="_blank"
+        rel="noreferrer"
       >
         {label}
       </a>

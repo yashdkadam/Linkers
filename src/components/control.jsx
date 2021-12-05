@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Form from "./common/form";
 import Profile from "./profile";
-class Control extends React.Component {
+class Control extends Component {
   addForm = () => {
     const { data, onDelete, updateData } = this.props;
     let forms = [];

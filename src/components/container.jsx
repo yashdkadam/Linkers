@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import Control from "./control";
 import Panel from "./Panel";
-import VerticalNav from "./verticalNav";
-import {
-  getLinks,
-  deleteTab,
-  addTab,
-  getProfile,
-} from "./../services/linkService";
-class Container extends React.Component {
+import { getLinks, deleteTab, addTab } from "./../services/linkService";
+class Container extends Component {
   state = {
     count: 0,
     data: [],
@@ -39,7 +33,6 @@ class Container extends React.Component {
   };
 
   increamentCount = async () => {
-    const originalData = this.state.data;
     const { count } = this.state;
     const { data } = await getLinks();
     const res = await addTab(count);
@@ -59,7 +52,7 @@ class Container extends React.Component {
     const { data, count } = this.state;
     const { condition, profile, updateProfileData } = this.props;
     return (
-      <div className="d-flex align-items-start flex-row m-0">
+      <div className="d-flex align-items-start flex-row m-0 bg-light">
         <Control
           addForm={this.addForm}
           increamentCount={this.increamentCount}

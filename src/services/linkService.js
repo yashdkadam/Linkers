@@ -1,7 +1,5 @@
 import http from "./httpService";
 
-const apiUrl = "";
-
 export function getLinks() {
   return http.get(
     "https://linkers-bbb30-default-rtdb.firebaseio.com/api/links.json"

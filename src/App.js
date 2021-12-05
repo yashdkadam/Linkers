@@ -8,7 +8,7 @@ import { Redirect, Switch, Route } from "react-router-dom";
 import { getLinks, getProfile } from "./services/linkService";
 import "./App.css";
 
-class App extends React.Component {
+class App extends Component {
   state = { data: [], profile: [], condition: true, mobileView: "true" };
 
   async componentDidMount() {

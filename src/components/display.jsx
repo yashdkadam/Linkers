@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import LinkGroup from "./linkGroup";
 
-class Panel extends React.Component {
+class Panel extends Component {
   componentDidMount() {
     const { handleMobileView } = this.props;
     handleMobileView();
@@ -22,6 +22,7 @@ class Panel extends React.Component {
       <img
         src="https:randomuser.me/api/portraits/men/1.jpg"
         className="rounded-circle mx-auto d-block imgSize mt-4"
+        alt="..."
       />
     );
   };

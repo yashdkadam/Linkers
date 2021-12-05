@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-
-class VerticalNav extends React.Component {
+class VerticalNav extends Component {
   render() {
     const { changeCondition } = this.props;
     return (
@@ -11,6 +9,7 @@ class VerticalNav extends React.Component {
             <img
               src="https://randomuser.me/api/portraits/men/1.jpg"
               className="rounded-circle imgHeight mb-3"
+              alt="..."
             />
           </div>
         </nav>
