@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const NavBar = () => {
   return (
@@ -9,7 +9,7 @@ const NavBar = () => {
       </Link>
       <a
         className="navbar-brand "
-        href="http://localhost:3000/display"
+        href="/display"
         target="_blank"
         rel="noreferrer"
       >
