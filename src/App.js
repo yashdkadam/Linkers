@@ -1,12 +1,14 @@
-import React, { Component } from "react";
-import Container from "./components/container";
-import NotFound from "./components/notFound";
-import NavBar from "./components/common/navBar";
-import VerticalNav from "./components/verticalNav";
-import Display from "./components/display";
-import { Redirect, Switch, Route } from "react-router-dom";
-import { getLinks, getProfile } from "./services/linkService";
 import "./App.css";
+
+import React, { Component } from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
+import { getLinks, getProfile } from "./services/linkService";
+
+import Container from "./components/container";
+import Display from "./components/display";
+import NavBar from "./components/common/navBar";
+import NotFound from "./components/notFound";
+import VerticalNav from "./components/verticalNav";
 
 class App extends Component {
   state = { data: [], profile: [], condition: true, mobileView: "true" };
@@ -69,7 +71,7 @@ class App extends Component {
             <Route path="/display" component={Display} />
             <Route path="/not-found" component={NotFound} />
             <Redirect from="/" exact to="/links" />
-            <Redirect to="/not-found" />
+            <Redirect to="/display" />
           </Switch>
         </div>
       </React.Fragment>
